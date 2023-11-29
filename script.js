@@ -48,6 +48,9 @@ function openSetupBox() {
 }
 
 function toggleNotificationBox() {
+  if (adminMenuBox.classList.contains("admin__menu__toggle")) {
+    adminMenuBox.classList.remove("admin__menu__toggle");
+  }
   alertBox.classList.toggle("alerts-box__toggle");
   notificationIcon.classList.toggle("notification__icon__hover");
   const expanded = alertBox.classList.contains("alert__box__toggle");
@@ -66,6 +69,9 @@ function handleKeyPress(event) {
 }
 
 function toggleAdminUserBox() {
+  if (alertBox.classList.contains("alerts-box__toggle")) {
+    alertBox.classList.remove("alerts-box__toggle");
+  }
   adminMenuBox.classList.toggle("admin__menu__toggle");
   userIcon.classList.toggle("user__box__active");
   const expanded = adminMenuBox.classList.contains("admin__menu__toggle");
